@@ -1,0 +1,31 @@
+#calculator {
+  position: relative;
+  font-size: 1rem;
+  padding: 0.5em;
+  width: 20em;
+  height: 30em;
+  background-color: #eee;
+  border-radius: 30px;
+  display: grid;
+  grid-row-gap: 0.5em;
+  grid-column-gap: 0.5em;
+  grid-template:
+    "display display display display" auto
+    "clear clear divide multiply" 1fr
+    "seven eight nine subtract" 1fr
+    "four five six add" 1fr
+    "one two three equals" 1fr
+    "zero zero decimal equals" 1fr;
+}
+
+#calculator::after {
+  display: block;
+  content: "By Nicolas Garay";
+  position: absolute;
+  bottom: -2em;
+  width: 100%;
+  text-align: center;
+
+  font-size: 1rem;
+  margin: 0;
+}

@@ -1,0 +1,28 @@
+#display-container {
+  padding: 0.5em;
+  font-size: 1.6rem;
+  background-color: #222;
+  grid-area: display;
+  border-radius: 30px 30px 0 0;
+  text-align: right;
+  color: white;
+  max-width: 100%;
+
+}
+
+#display{
+  min-height: 1.2em;
+}
+
+#display-formula {
+  font-size: 0.5em;
+  padding: 0.5em 0em;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 2.5em;
+  justify-content: flex-end;
+  max-width: 100%;
+  word-wrap: wrap;
+  word-break: break-all;
+  color: yellowgreen;
+}

@@ -1,0 +1,19 @@
+.button {
+  background-color: #222;
+  color:white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+#clear{
+  background-color: tomato;
+}
+
+#equals{
+  background-color: var(--main-color);
+}
