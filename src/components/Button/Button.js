@@ -1,10 +1,10 @@
 import React from "react";
 import "./Button.css";
 
-const Button = ({ label, id, handleClick }) => {
+const Button = ({ value, id, handleClick }) => {
   return (
     <div className="button" onClick={handleClick} id={id} style={{ gridArea: id }}>
-      {label}
+      {value}
     </div>
   );
 };

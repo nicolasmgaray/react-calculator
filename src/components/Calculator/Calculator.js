@@ -9,8 +9,8 @@ const Calculator = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { output, formula } = state;
 
-  const handleClick = ({ type, id, label }) => {
-    return () => dispatch({ type: type, id: id, label: label });
+  const handleClick = ({ type, id, value }) => {
+    return () => dispatch({ type: type, id: id, value: value });
   };
 
   return (
