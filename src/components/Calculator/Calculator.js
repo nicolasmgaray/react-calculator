@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import Display from "../Display";
 import Button from "../Button";
 import { reducer, initialState } from "../../util/reducer";
@@ -12,6 +12,27 @@ const Calculator = () => {
   const handleClick = ({ type, id, value }) => {
     return () => dispatch({ type: type, id: id, value: value });
   };
+
+  const handleKeyPress = (e) => {
+    const { key, keyCode } = e;
+
+    if (key >= 0 && key <= 9) {
+      dispatch({ type: "number", value: key });
+    } else if (keyCode === 13) {
+      dispatch({ type: "evaluate", value: key });
+    } else if (key === "*" || key === "/" || key === "-" || key === "+") {
+      dispatch({ type: "operator", value: key });
+    } else if (key === ".") {
+      dispatch({ type: "decimal", value: key });
+    } else if (keyCode === 46) {
+      dispatch({ type: "clear", value: key });
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
+  }, []);
 
   return (
     <div id="calculator">

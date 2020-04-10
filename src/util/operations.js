@@ -5,8 +5,10 @@ import {
   endsWithOperator,
 } from "./regex.js";
 
+const maxDigits = 21;
+
 const handleNumber = (state, value) => {
-  if (state.output.length >= 20) return { ...state };
+  if (state.output.length >= maxDigits) return { ...state };
   if (state.evaluated)
     return { ...state, evaluated: false, formula: value, output: value };
   let newOutput =
@@ -18,7 +20,7 @@ const handleNumber = (state, value) => {
 };
 
 const handleDecimal = (state, value) => {
-  if (state.output.length >= 20 || hasDecimal(state.output))
+  if (state.output.length >= maxDigits || hasDecimal(state.output))
     return { ...state };
   else
     return {

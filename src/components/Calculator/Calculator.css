@@ -2,15 +2,16 @@
   position: relative;
   font-size: 1rem;
   padding: 0.5em;
-  width: 20em;
-  height: 30em;
+  width: 22em;
+ 
+  height: 35em;
   background-color: #eee;
   border-radius: 30px;
   display: grid;
   grid-row-gap: 0.5em;
   grid-column-gap: 0.5em;
   grid-template:
-    "display display display display" auto
+    "display display display display" 2fr
     "clear clear divide multiply" 1fr
     "seven eight nine subtract" 1fr
     "four five six add" 1fr

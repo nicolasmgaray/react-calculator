@@ -24,7 +24,6 @@ function reducer(state, action) {
       return handleOperator(state, value);
     case "evaluate":
       return handleEvaluate(state, value);
-
     case "clear":
       return { ...initialState };
     default:
